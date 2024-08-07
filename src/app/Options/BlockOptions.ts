@@ -12,5 +12,14 @@ export const BlockOptions = [
       value: 'BSC',
       label: 'BNB Smart Chain',
     },
+    {
+      value: 'BSC',
+      label: 'BNB Smart Chain',
+    },
+    {
+      value: 'BSC',
+      label: 'BNB Smart Chain',
+    },
+    
   ];
   

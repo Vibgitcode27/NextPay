@@ -103,26 +103,24 @@ export default function Page() {
         
 
        
-        <Card className="leftyCardss">
+        
           {eventData ? (
-            <>
-              <div className="card__content">
-                <p style={{ padding: '10px' }}>From: {eventData.from}</p>
-              </div>
-              <div className="card__content">
-                <p style={{ padding: '10px' }}>To: {eventData.to}</p>
-              </div>
-              <div className="card__content">
-                <p style={{ padding: '10px' }}>Amount: {eventData.amount}</p>
-              </div>
-              <div className="card__content">
-                <p style={{ padding: '10px' }}>Name: {eventData.name}</p>
-              </div>
-              <div className="card__content">
-                <p style={{ padding: '10px' }}>Blockchain: {eventData.blockchain}</p>
-              </div>
+            <><Card className="leftyCardss">
+              <Card className="leftyCard">
+            <div className="invoice" style={{color:"white"}}>
+              <div className="check-icon">✓</div>
+              <h1 style={{fontSize:"50px" , textAlign:"center"}}>{eventData.amount} <span>ETH</span> </h1>
+              
+              <div className="details" style={{color:"white" , marginTop:"6%" , textAlign:"center"}}>
+                  <p className='tran-id'><strong style={{marginRight:"20px"}}>Receipt ID :</strong> {eventData.from}</p>
+                  <p className='tran-id'><strong style={{marginRight:"20px"}}>Invoice ID :</strong> {eventData.to}</p>
+                  <p className='tran-id'><strong style={{marginRight:"25px"}}>Receipt ID :</strong>{eventData.to}</p>
+                  <p className='tran-id'><strong style={{marginRight:"20px"}}>Unit :</strong>{eventData.name}</p>
+                  
+              </div></div></Card></Card>
             </>
           ) : (
+            <Card className="leftyCardss">
             <Card className="leftyCard">
               <div style={{ color: 'white', textAlign: 'center', fontSize: '30px', marginTop: '8%' }}>
                 Choose BlockChain
@@ -150,9 +148,9 @@ export default function Page() {
                 <Loader />
               </div>
               <div style={{ textAlign: 'center', color: 'white' }}>-------------- Waiting for transactions --------------</div>
-            </Card>
+            </Card></Card>
           )}
-        </Card>
+        
       </div>
     </div>
   );
